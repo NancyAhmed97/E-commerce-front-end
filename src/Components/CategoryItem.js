@@ -2,7 +2,6 @@ import React from "react";
 import styledComponents from "styled-components";
 
 function CategoryItem({ item }) {
-  console.log(item);
   const Container = styledComponents.div`
   flex: 1;
   margin: 3px;
