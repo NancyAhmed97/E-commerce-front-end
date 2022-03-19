@@ -1,5 +1,6 @@
 import React from "react";
 import styledComponents from "styled-components";
+import { mobile } from "../responsive";
 import {
   Facebook,
   Instagram,
@@ -12,26 +13,27 @@ import {
 function Footer() {
   const Container = styledComponents.div`
   display: flex;
+  ${mobile({ flexDirection: "column" })}
 `;
 
-  const Left = styledComponents.div`
+const Left = styledComponents.div`
   flex: 1;
   display: flex;
   flex-direction: column;
   padding: 20px;
 `;
 
-  const Logo = styledComponents.h1``;
+const Logo = styledComponents.h1``;
 
-  const Desc = styledComponents.p`
+const Desc = styledComponents.p`
   margin: 20px 0px;
 `;
 
-  const SocialContainer = styledComponents.div`
+const SocialContainer = styledComponents.div`
   display: flex;
 `;
 
-  const SocialIcon = styledComponents.div`
+const SocialIcon = styledComponents.div`
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -43,16 +45,17 @@ function Footer() {
   margin-right: 20px;
 `;
 
-  const Center = styledComponents.div`
+const Center = styledComponents.div`
   flex: 1;
   padding: 20px;
+  ${mobile({ display: "none" })}
 `;
 
-  const Title = styledComponents.h3`
+const Title = styledComponents.h3`
   margin-bottom: 30px;
 `;
 
-  const List = styledComponents.ul`
+const List = styledComponents.ul`
   margin: 0;
   padding: 0;
   list-style: none;
@@ -60,23 +63,24 @@ function Footer() {
   flex-wrap: wrap;
 `;
 
-  const ListItem = styledComponents.li`
+const ListItem = styledComponents.li`
   width: 50%;
   margin-bottom: 10px;
 `;
 
-  const Right = styledComponents.div`
+const Right = styledComponents.div`
   flex: 1;
   padding: 20px;
+  ${mobile({ backgroundColor: "#fff8f8" })}
 `;
 
-  const ContactItem = styledComponents.div`
+const ContactItem = styledComponents.div`
   margin-bottom: 20px;
   display: flex;
   align-items: center;
 `;
 
-  const Payment = styledComponents.img`
+const Payment = styledComponents.img`
     width: 50%;
 `;
 

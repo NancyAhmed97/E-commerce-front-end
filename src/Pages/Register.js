@@ -1,5 +1,6 @@
 import React from "react";
 import styledComponents from "styled-components";
+import { mobile } from "../responsive";
 
 function Register() {
   const Container = styledComponents.div`
@@ -21,6 +22,8 @@ function Register() {
     width: 40%;
     padding: 20px;
     background-color: white;
+    ${mobile({ width: "75%" })}
+
   `;
 
   const Title = styledComponents.h1`

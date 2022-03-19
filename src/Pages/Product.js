@@ -5,12 +5,14 @@ import Navbar from "../Components/Navbar";
 import { Add, Remove } from "@material-ui/icons";
 import Newsletter from "../Components/Newsletter";
 import Footer from "../Components/Footer";
-
+import { mobile } from "../responsive";
 function Product() {
   const Container = styledComponents.div``;
   const Wrapper = styledComponents.div`
     padding: 50px;
     display: flex;
+    ${mobile({ padding: "10px", flexDirection:"column" })}
+
   `;
   const ImgContainer = styledComponents.div`
   flex: 1;
@@ -20,10 +22,14 @@ function Product() {
   width: 100%;
   height: 90vh;
   object-fit: cover;
+  ${mobile({ height: "40vh" })}
+
 `;
   const InfoContainer = styledComponents.div`
   flex: 1;
   padding: 0px 50px;
+  ${mobile({ padding: "10px" })}
+
 `;
 
   const Title = styledComponents.h1`
@@ -44,6 +50,8 @@ function Product() {
   margin: 30px 0px;
   display: flex;
   justify-content: space-between;
+  ${mobile({ width: "100%" })}
+
 `;
 
   const Filter = styledComponents.div`
@@ -77,6 +85,8 @@ function Product() {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  ${mobile({ width: "100%" })}
+
 `;
 
   const AmountContainer = styledComponents.div`
